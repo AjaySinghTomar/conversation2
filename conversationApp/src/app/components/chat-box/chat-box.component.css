@@ -1,0 +1,81 @@
+.mat-card-custom {
+  margin: 10px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.conversation-chat-custom {
+  display: flex;
+}
+
+.button-custom {
+  background-color: #3A8E82;
+  color: #FFFFFF;
+  height: 33px;
+}
+
+.h2-custom {
+  text-align: left;
+  font: Poppins;
+  ;
+  color: #4E4E5A;
+  font-size: 20px;
+}
+
+.img-custom {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.div-custom {
+  margin-top: 10px;
+}
+
+.mat-CardContent {
+  padding: 0px 0px 0px 0px;
+  overflow-wrap: normal;
+}
+
+/* // */
+
+.example-viewport {
+  height: 510px;
+  width: 325px;
+}
+
+.example-item {
+  height: 50px;
+}
+
+.icon-image-custom {
+  margin: 0px 2px 2px -5px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.container-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 220px;
+  height: 1.2em;
+  white-space: nowrap;
+}
+
+.img-custom-group {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.message-seen {
+  color: #292931;
+}
+
+.message-unseen {
+  color: #4E4E5A;
+}

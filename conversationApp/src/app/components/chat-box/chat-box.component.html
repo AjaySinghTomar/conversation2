@@ -1,0 +1,44 @@
+<mat-card class="mat-card-custom">
+  <div class="conversation-chat-custom">
+    <h2 class="h2-custom">Conversations</h2>
+    <span class="example-spacer"></span>
+    <button mat-raised-button class="button-custom">
+      <img src="../../../assets/images/icn - new chat (1).svg" class="icon-image-custom" alt="button-bar" />
+      New Chat
+    </button>
+  </div>
+
+  <mat-card-content class="mat-CardContent">
+    <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+      <div *cdkVirtualFor="let friend of friends; templateCacheSize: 0" class="example-item">
+
+        <mat-card-header *ngIf="!friend.isGroup"
+          [ngClass]="{'message-seen' : friend.isSeen == true, 'message-unseen' : friend.isSeen == false}">
+          <div mat-card-avatar>
+            <img class="img-custom" src="{{ friend.photo }}" alt="friendPicture" />
+          </div>
+          <mat-card-title>{{ friend.name }}</mat-card-title>
+          <mat-card-subtitle class="container-overflow"
+            [ngClass]="{'message-seen' : friend.isSeen == true, 'message-unseen' : friend.isSeen == false}">{{
+            friend.message }}</mat-card-subtitle>
+          <div>{{friend.time}}</div>
+        </mat-card-header>
+
+        <mat-card-header *ngIf="friend.isGroup"
+          [ngClass]="{'message-seen' : friend.isSeen == true, 'message-unseen' : friend.isSeen == false}">
+          <div mat-card-avatar>
+            <img *ngFor="let value of friend.photo" class="img-custom-group" src="{{ value.photo }}"
+              alt="friendPiweeecture" />
+          </div>
+          <mat-card-title>{{ friend.name }}</mat-card-title>
+          <mat-card-subtitle class="container-overflow"
+            [ngClass]="{'message-seen' : friend.isSeen == true, 'message-unseen' : friend.isSeen == false}">{{
+            friend.message }}</mat-card-subtitle>
+          <div>{{friend.time}}</div>
+        </mat-card-header>
+
+
+      </div>
+    </cdk-virtual-scroll-viewport>
+  </mat-card-content>
+</mat-card>
